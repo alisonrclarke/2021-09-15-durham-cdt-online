@@ -3,7 +3,7 @@ layout: workshop      # DON'T CHANGE THIS.
 # More detailed instructions (including how to fill these variables for an
 # online workshop) are available at
 # https://carpentries.github.io/workshop-template/customization/index.html
-venue: "Durham University"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
+venue: "CDT Data Science Workshop, Durham University"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
 address: "online"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
 country: "gb"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
 language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the workshop
@@ -14,7 +14,7 @@ humantime: "10.00-11.30 and 12.00-13.30"    # human-readable times for the works
 startdate: 2021-09-15      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 2021-09-15        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
 instructor: ["Alison Clarke"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: []     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+helper: ["TBC"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 email: ["alison.r.clarke@durham.ac.uk"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes:  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
@@ -102,7 +102,7 @@ AUDIENCE
 
 Explain who your audience is.  (In particular, tell readers if the
 workshop is only open to people from a particular institution.
-{% endcomment %}
+
 {% if site.carpentry == "swc" %}
 {% include swc/who.html %}
 {% elsif site.carpentry == "dc" %}
@@ -110,7 +110,7 @@ workshop is only open to people from a particular institution.
 {% elsif site.carpentry == "lc" %}
 {% include lc/who.html %}
 {% endif %}
-
+{% endcomment %}
 {% comment %}
 LOCATION
 
@@ -159,7 +159,6 @@ This block displays the date and links to Google Calendar.
 <p id="when">
   <strong>When:</strong>
   {{page.humandate}}.
-  {% include workshop_calendar.html %}
 </p>
 {% endif %}
 
@@ -177,7 +176,8 @@ Modify the block below if there are any special requirements.
     Participants must have access to a computer with a
     Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
   {% endif %}
-  They should have a few specific software packages installed (listed <a href="#setup">below</a>).
+  Before the course participants are required to <b>install git</b> and to <b>create a GitHub account</b>, as per the
+  <a href="#setup">setup instructions</a>.
 </p>
 
 {% comment %}
@@ -267,7 +267,6 @@ Edit the text to match who can attend the workshop. For instance:
 
 {% comment%}
 CODE OF CONDUCT
-{% endcomment %}
 <h2 id="code-of-conduct">Code of Conduct</h2>
 
 <p>
@@ -280,6 +279,7 @@ Everyone who participates in Carpentries activities is required to conform to th
   </a>
 </p>
 <hr/>
+{% endcomment %}
 
 
 {% comment %}
@@ -307,7 +307,6 @@ We will use this <a href="{{ page.collaborative_notes }}">collaborative document
 
 {% comment %}
 SURVEYS - DO NOT EDIT SURVEY LINKS
-{% endcomment %}
 <h2 id="surveys">Surveys</h2>
 <p>Please be sure to complete these surveys before and after the workshop.</p>
 {% if site.carpentry == "pilot" %}
@@ -328,7 +327,7 @@ change the value of `carpentry` to `pilot`.
 {% endif %}
 
 <hr/>
-
+{% endcomment %}
 
 {% comment %}
 SCHEDULE
